@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Tweet
+{% endblock %}
+
+{% block content %}
+    <h1 class="text-center mt-4 "> Welcome to project </h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Tweet</button>
+    </form>
+{% endblock %}
